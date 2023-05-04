@@ -15,6 +15,11 @@ function generatePassword() {
         alert("Invalid, Must be between 8 - 128 characters!");
         return;
     }
+
+var lowercases = confirm("Do you want lowercases in the password?");
+var uppercases = confirm("Do you want uppercases in the password?");
+var numbers = confirm("Do you want numbers in the password?");
+var special = confirm("Do you want special characters in the password?");
 }
 
 // Get references to the #generate element
