@@ -21,6 +21,17 @@ var uppercases = confirm("Do you want uppercases in the password?");
 var numbers = confirm("Do you want numbers in the password?");
 var special = confirm("Do you want special characters in the password?");
 
+
+// Minimum count for lowercase, uppercase, numbers, and special characters
+
+var minimumCount = 0;
+var minimumLowercases = "";
+var minimumUppercases = "";
+var minimumNumbers = "";
+var minimumSpecialCharacters = "";
+
+
+// Function Generator
 var functionArray = {
     getLowerCases: function() {
         return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
@@ -37,6 +48,27 @@ var functionArray = {
 };
 
 }
+
+ // Checks the user if they selected "Ok" for all and uses the empty minimums
+
+ if (lowercases === true) {
+    minimumLowercases = functionArray.getLowerCases();
+    minimumCount++;
+}
+if (uppercases === true) {
+    minimumUppercases = functionArray.getUpperCases();
+    minimumCount++;
+}
+if (numbers === true) {
+    minimumNumbers = functionArray.getNumbers();
+    minimumCount++;
+}
+if (special === true) {
+    minimumSpecialCharacters = functionArray.getSpecialCharacters();
+    minimumCount++;
+}
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
