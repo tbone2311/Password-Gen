@@ -20,6 +20,22 @@ var lowercases = confirm("Do you want lowercases in the password?");
 var uppercases = confirm("Do you want uppercases in the password?");
 var numbers = confirm("Do you want numbers in the password?");
 var special = confirm("Do you want special characters in the password?");
+
+var functionArray = {
+    getLowerCases: function() {
+        return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
+    },
+    getUpperCases: function() {
+        return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
+    },
+    getNumbers: function() {
+        return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
+    },
+    getSpecialCharacters: function() {
+        return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
+    }
+};
+
 }
 
 // Get references to the #generate element
